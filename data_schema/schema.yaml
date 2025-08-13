@@ -1,0 +1,28 @@
+columns:
+  - ID: object
+  - Delivery_person_ID: object
+  - Delivery_person_Age: object
+  - Delivery_person_Ratings: object
+  - Restaurant_latitude: float64
+  - Restaurant_longitude: float64
+  - Delivery_location_latitude: float64
+  - Delivery_location_longitude: float64
+  - Order_Date: object
+  - Time_Orderd: object
+  - Time_Order_picked: object
+  - Weatherconditions: object
+  - Road_traffic_density: object
+  - Vehicle_condition: int64
+  - Type_of_order: object
+  - Type_of_vehicle: object
+  - multiple_deliveries: object
+  - Festival: object
+  - City: object
+  - Time_taken(min): object
+
+numerical_columns:
+  - Restaurant_latitude
+  - Restaurant_longitude
+  - Delivery_location_latitude
+  - Delivery_location_longitude
+  - Vehicle_condition
