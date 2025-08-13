@@ -22,6 +22,16 @@ import joblib
 import sys 
 import joblib
 
+import mlflow
+
+from dotenv import load_dotenv
+load_dotenv()
+
+os.environ["MLFLOW_TRACKING_URI"]=os.getenv("MLFLOW_TRACKING_URI")
+os.environ["MLFLOW_TRACKING_USERNAME"]=os.getenv("MLFLOW_TRACKING_USERNAME")
+os.environ["MLFLOW_TRACKING_PASSWORD"]=os.getenv("MLFLOW_TRACKING_PASSWORD")
+
+
 class ModelTrainer:
     def __init__(self, model_trainer_config:ModelTrainerConfig, data_transformation_artifact:DataTransformationArtifact):
         try:
@@ -31,6 +41,18 @@ class ModelTrainer:
         except Exception as e:
             raise DeliveryTimeException(e, sys)
     
+    def track_mlflow(self, best_model, regressionMetric):
+        mlflow.set_tracking_uri(os.getenv("MLFLOW_TRACKING_URI"))
+
+        with mlflow.start_run():
+            mlflow.log_metric("f1_score", regressionMetric.r2_score)
+            mlflow.log_metric("precision", regressionMetric.mean_absolute_error)
+            mlflow.log_metric("recall", regressionMetric.mean_squared_error)
+
+            joblib.dump(best_model, "model.joblib")
+
+            mlflow.log_artifact("model.joblib", artifact_path="model")
+
 
     def train_model(self,X_train, y_train, X_test, y_test):
         try:
@@ -60,11 +82,16 @@ class ModelTrainer:
 
             y_train_pred = best_model.predict(X_train)
 
-            classification_train_metric=get_regression_score(y_true=y_train, y_pred=y_train_pred)
+            regression_train_metric=get_regression_score(y_true=y_train, y_pred=y_train_pred)
 
+            self.track_mlflow(best_model, regression_train_metric)
+            
             y_test_pred = best_model.predict(X_test)
-            classification_test_metric = get_regression_score(y_true=y_test, y_pred=y_test_pred)
+            regression_test_metric = get_regression_score(y_true=y_test, y_pred=y_test_pred)
 
+            self.track_mlflow(best_model, regression_test_metric)
+
+            
     
             model_dir_path = os.path.dirname(self.model_trainer_config.trained_model_file_path)
             os.makedirs(model_dir_path, exist_ok=True)
@@ -76,8 +103,8 @@ class ModelTrainer:
             save_object("final_model/model.pkl", best_model)
 
             model_trainer_artifact=ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,
-                                                        train_metric_artifact=classification_train_metric,
-                                                        test_metric_artifact=classification_test_metric
+                                                        train_metric_artifact=regression_train_metric,
+                                                        test_metric_artifact=regression_test_metric
                                                         )
             logging.info(f"Model trainer artifact: {model_trainer_artifact}")
             return model_trainer_artifact

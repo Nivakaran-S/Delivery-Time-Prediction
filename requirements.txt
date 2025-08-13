@@ -14,5 +14,7 @@ geopy
 xgboost
 python-dotenv
 flask
+xgboost
+scipy
 
 #-e .

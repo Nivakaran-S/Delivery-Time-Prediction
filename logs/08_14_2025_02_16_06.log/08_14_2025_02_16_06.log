@@ -1,0 +1,35 @@
+[ 2025-08-14 02:16:30,591 ] 25 root - INFO - Initiate the data ingestion
+[ 2025-08-14 02:23:36,653 ] 66 root - INFO - Performed train test split on the dataframe
+[ 2025-08-14 02:23:36,653 ] 68 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2025-08-14 02:23:36,653 ] 76 root - INFO - Exporting train and test file path
+[ 2025-08-14 02:23:38,354 ] 85 root - INFO - Exported train and test file path
+[ 2025-08-14 02:23:38,576 ] 27 root - INFO - Data Initiation Completed
+[ 2025-08-14 02:23:38,577 ] 29 root - INFO - Data Ingestion Completed
+[ 2025-08-14 02:23:38,581 ] 33 root - INFO - Initiate the data validation
+[ 2025-08-14 02:23:39,096 ] 33 root - INFO - Required number of columns: 2
+[ 2025-08-14 02:23:39,096 ] 34 root - INFO - Data frame has columns: 20
+[ 2025-08-14 02:23:39,096 ] 33 root - INFO - Required number of columns: 2
+[ 2025-08-14 02:23:39,096 ] 34 root - INFO - Data frame has columns: 20
+[ 2025-08-14 02:23:43,904 ] 35 root - INFO - Data Validation Completed
+[ 2025-08-14 02:23:43,904 ] 39 root - INFO - Data transformation started
+[ 2025-08-14 02:23:43,904 ] 188 root - INFO - Entered initialize_data_transformation method of Data transformation class
+[ 2025-08-14 02:23:43,905 ] 190 root - INFO - Starting data transformation
+[ 2025-08-14 02:23:43,905 ] 193 root - INFO - Reading train and test data
+[ 2025-08-14 02:23:45,320 ] 73 root - INFO - Data preprocessing completed for DataFrame
+[ 2025-08-14 02:23:45,550 ] 73 root - INFO - Data preprocessing completed for DataFrame
+[ 2025-08-14 02:23:45,550 ] 94 root - INFO - Starting feature engineering. Initial DataFrame shape: (91187, 19)
+[ 2025-08-14 02:23:45,995 ] 85 root - INFO - Label encoding completed for DataFrame
+[ 2025-08-14 02:23:59,546 ] 172 root - INFO - Feature engineering completed successfully.
+[ 2025-08-14 02:23:59,546 ] 173 root - INFO - Final cleaned DataFrame shape: (72997, 13)
+[ 2025-08-14 02:23:59,547 ] 94 root - INFO - Starting feature engineering. Initial DataFrame shape: (22797, 19)
+[ 2025-08-14 02:23:59,666 ] 85 root - INFO - Label encoding completed for DataFrame
+[ 2025-08-14 02:24:03,035 ] 172 root - INFO - Feature engineering completed successfully.
+[ 2025-08-14 02:24:03,035 ] 173 root - INFO - Final cleaned DataFrame shape: (18189, 13)
+[ 2025-08-14 02:24:03,035 ] 214 root - INFO - Shape after train feature engineering (72997, 13)
+[ 2025-08-14 02:24:03,035 ] 215 root - INFO - Shape after test feature engineering (18189, 13)
+[ 2025-08-14 02:24:03,069 ] 43 root - INFO - Data Transformation Completed
+[ 2025-08-14 02:24:03,069 ] 45 root - INFO - Model Training started
+[ 2025-08-14 02:24:03,105 ] 126 root - INFO - shape of training data: (72997, 13)
+[ 2025-08-14 02:24:03,105 ] 127 root - INFO - Testing array: (18189, 13)
+[ 2025-08-14 02:24:03,105 ] 136 root - INFO - X_train shape: (72997, 12)
+[ 2025-08-14 02:24:03,105 ] 137 root - INFO - X_test shape(18189, 12)
