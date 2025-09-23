@@ -88,7 +88,6 @@ class ModelTrainer:
             
             y_test_pred = best_model.predict(X_test)
             regression_test_metric = get_regression_score(y_true=y_test, y_pred=y_test_pred)
-
             self.track_mlflow(best_model, regression_test_metric)
 
             
