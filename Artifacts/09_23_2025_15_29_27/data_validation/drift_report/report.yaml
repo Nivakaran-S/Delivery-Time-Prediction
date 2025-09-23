@@ -1,0 +1,60 @@
+City:
+  drift_status: false
+  p_value: 0.9300584266700545
+Delivery_location_latitude:
+  drift_status: false
+  p_value: 0.5330032408487243
+Delivery_location_longitude:
+  drift_status: false
+  p_value: 0.25467961793847294
+Delivery_person_Age:
+  drift_status: false
+  p_value: 0.7615440508028154
+Delivery_person_ID:
+  drift_status: false
+  p_value: 0.6367687123010832
+Delivery_person_Ratings:
+  drift_status: false
+  p_value: 0.1362186006792101
+Festival:
+  drift_status: false
+  p_value: 1.0
+ID:
+  drift_status: false
+  p_value: 0.10544101884398438
+Order_Date:
+  drift_status: false
+  p_value: 0.17609748631497113
+Restaurant_latitude:
+  drift_status: false
+  p_value: 0.5664134324359865
+Restaurant_longitude:
+  drift_status: false
+  p_value: 0.34841313501894877
+Road_traffic_density:
+  drift_status: false
+  p_value: 0.948947701500271
+Time_Order_picked:
+  drift_status: false
+  p_value: 0.7105000069260246
+Time_Orderd:
+  drift_status: false
+  p_value: 0.7007304723586194
+Time_taken(min):
+  drift_status: false
+  p_value: 0.8434354991541249
+Type_of_order:
+  drift_status: false
+  p_value: 0.9982197065270094
+Type_of_vehicle:
+  drift_status: false
+  p_value: 0.9999978284762339
+Vehicle_condition:
+  drift_status: false
+  p_value: 0.8768162261319181
+Weatherconditions:
+  drift_status: false
+  p_value: 0.9973859040274355
+multiple_deliveries:
+  drift_status: false
+  p_value: 0.999999999999963

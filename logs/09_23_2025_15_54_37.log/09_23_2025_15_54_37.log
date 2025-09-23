@@ -1,0 +1,78 @@
+[ 2025-09-23 15:54:49,703 ] 52 root - INFO - Model and scaler loaded successfully
+[ 2025-09-23 15:54:49,744 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-09-23 15:54:49,758 ] 97 werkzeug - INFO -  * Debugger PIN: 122-206-653
+[ 2025-09-23 15:55:17,974 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'Medium', 'Vehicle_condition': 'Good', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '12.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:55:17,994 ] 134 root - INFO - Prediction: 44.4914665222168
+[ 2025-09-23 15:55:17,995 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:55:17] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:55:25,278 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'Medium', 'Vehicle_condition': 'Good', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '15.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:55:25,295 ] 134 root - INFO - Prediction: 44.80183410644531
+[ 2025-09-23 15:55:25,295 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:55:25] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:55:33,345 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'Medium', 'Vehicle_condition': 'Good', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:55:33,371 ] 134 root - INFO - Prediction: 44.97954177856445
+[ 2025-09-23 15:55:33,372 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:55:33] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:55:41,813 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'Medium', 'Vehicle_condition': 'Good', 'Delivery_person_Ratings': '1', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:55:41,840 ] 134 root - INFO - Prediction: 38.474998474121094
+[ 2025-09-23 15:55:41,840 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:55:41] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:55:49,629 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'Medium', 'Vehicle_condition': 'Good', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:55:49,658 ] 134 root - INFO - Prediction: 38.474998474121094
+[ 2025-09-23 15:55:49,658 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:55:49] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:55:59,490 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'Medium', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:55:59,543 ] 134 root - INFO - Prediction: 38.474998474121094
+[ 2025-09-23 15:55:59,545 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:55:59] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:56:06,852 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'Jam', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:56:06,868 ] 134 root - INFO - Prediction: 33.33474349975586
+[ 2025-09-23 15:56:06,869 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:56:06] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:56:14,109 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'High', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:56:14,125 ] 134 root - INFO - Prediction: 28.87203025817871
+[ 2025-09-23 15:56:14,126 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:56:14] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:56:21,256 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'Medium', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:56:21,271 ] 134 root - INFO - Prediction: 38.474998474121094
+[ 2025-09-23 15:56:21,272 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:56:21] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:56:28,566 ] 80 root - INFO - Received data: {'multiple_deliveries': '10', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:56:28,587 ] 134 root - INFO - Prediction: 38.474998474121094
+[ 2025-09-23 15:56:28,587 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:56:28] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:56:39,622 ] 80 root - INFO - Received data: {'multiple_deliveries': '100', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:56:39,636 ] 134 root - INFO - Prediction: 38.474998474121094
+[ 2025-09-23 15:56:39,637 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:56:39] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:56:45,632 ] 80 root - INFO - Received data: {'multiple_deliveries': '1000', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:56:45,745 ] 134 root - INFO - Prediction: 38.474998474121094
+[ 2025-09-23 15:56:45,750 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:56:45] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:56:53,683 ] 80 root - INFO - Received data: {'multiple_deliveries': '20', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '30', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:56:53,700 ] 134 root - INFO - Prediction: 38.474998474121094
+[ 2025-09-23 15:56:53,700 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:56:53] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:56:59,407 ] 80 root - INFO - Received data: {'multiple_deliveries': '20', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '20.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:56:59,417 ] 134 root - INFO - Prediction: 36.855445861816406
+[ 2025-09-23 15:56:59,417 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:56:59] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:57:06,008 ] 80 root - INFO - Received data: {'multiple_deliveries': '20', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '2', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '20.0', 'City': 'Urban'}
+[ 2025-09-23 15:57:06,019 ] 134 root - INFO - Prediction: 35.2763557434082
+[ 2025-09-23 15:57:06,020 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:57:06] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:57:23,455 ] 80 root - INFO - Received data: {'multiple_deliveries': '20', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'No', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '25.0', 'City': 'Urban'}
+[ 2025-09-23 15:57:23,470 ] 134 root - INFO - Prediction: 42.197444915771484
+[ 2025-09-23 15:57:23,470 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:57:23] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:57:29,527 ] 80 root - INFO - Received data: {'multiple_deliveries': '20', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'Yes', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '25.0', 'City': 'Urban'}
+[ 2025-09-23 15:57:29,539 ] 134 root - INFO - Prediction: 42.197444915771484
+[ 2025-09-23 15:57:29,540 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:57:29] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:57:36,281 ] 80 root - INFO - Received data: {'multiple_deliveries': '20', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'Yes', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '25.0', 'City': 'Urban'}
+[ 2025-09-23 15:57:36,297 ] 134 root - INFO - Prediction: 42.197444915771484
+[ 2025-09-23 15:57:36,298 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:57:36] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:57:41,117 ] 80 root - INFO - Received data: {'multiple_deliveries': '20', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Cloudy', 'Festival': 'Yes', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '25.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:57:41,125 ] 134 root - INFO - Prediction: 45.24156188964844
+[ 2025-09-23 15:57:41,125 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:57:41] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:57:48,420 ] 80 root - INFO - Received data: {'multiple_deliveries': '20', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Sandstorms', 'Festival': 'Yes', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '25.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:57:48,431 ] 134 root - INFO - Prediction: 43.64107894897461
+[ 2025-09-23 15:57:48,432 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:57:48] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:58:32,440 ] 80 root - INFO - Received data: {'multiple_deliveries': '1', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Sandstorms', 'Festival': 'Yes', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '25.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:58:32,447 ] 134 root - INFO - Prediction: 39.4488639831543
+[ 2025-09-23 15:58:32,448 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:58:32] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:58:38,152 ] 80 root - INFO - Received data: {'multiple_deliveries': '2', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Sandstorms', 'Festival': 'Yes', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '25.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:58:38,169 ] 134 root - INFO - Prediction: 40.22709655761719
+[ 2025-09-23 15:58:38,170 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:58:38] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:58:43,982 ] 80 root - INFO - Received data: {'multiple_deliveries': '3', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Sandstorms', 'Festival': 'Yes', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '25.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:58:43,997 ] 134 root - INFO - Prediction: 43.64107894897461
+[ 2025-09-23 15:58:43,998 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:58:43] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 15:58:50,660 ] 80 root - INFO - Received data: {'multiple_deliveries': '4', 'Road_traffic_density': 'Low', 'Vehicle_condition': 'Poor', 'Delivery_person_Ratings': '5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Sandstorms', 'Festival': 'Yes', 'distance_traffic': '15.2', 'distance': '12.0', 'Delivery_person_Age': '25', 'prep_traffic': '25.0', 'City': 'Metropolitan'}
+[ 2025-09-23 15:58:50,667 ] 134 root - INFO - Prediction: 43.64107894897461
+[ 2025-09-23 15:58:50,668 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 15:58:50] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 16:24:30,840 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\Desktop\\FINAL PROJECTS\\Delivery-Time-Prediction\\src\\pipeline\\training_pipeline.py', reloading
+[ 2025-09-23 16:24:30,868 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\Desktop\\FINAL PROJECTS\\Delivery-Time-Prediction\\src\\constants\\training_pipeline\\__init__.py', reloading
+[ 2025-09-23 16:24:31,001 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\Desktop\\FINAL PROJECTS\\Delivery-Time-Prediction\\src\\cloud\\s3_syncer.py', reloading

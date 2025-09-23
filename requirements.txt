@@ -16,5 +16,6 @@ python-dotenv
 flask
 xgboost
 scipy
+pymongo
 
 #-e .

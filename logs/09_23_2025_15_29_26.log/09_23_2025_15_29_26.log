@@ -1,0 +1,41 @@
+[ 2025-09-23 15:29:32,802 ] 25 root - INFO - Initiate the data ingestion
+[ 2025-09-23 15:37:02,099 ] 66 root - INFO - Performed train test split on the dataframe
+[ 2025-09-23 15:37:02,099 ] 68 root - INFO - Exited split_data_as_train_test method of Data_Ingestion class
+[ 2025-09-23 15:37:02,100 ] 76 root - INFO - Exporting train and test file path
+[ 2025-09-23 15:37:06,472 ] 85 root - INFO - Exported train and test file path
+[ 2025-09-23 15:37:06,843 ] 27 root - INFO - Data Initiation Completed
+[ 2025-09-23 15:37:06,843 ] 29 root - INFO - Data Ingestion Completed
+[ 2025-09-23 15:37:06,848 ] 33 root - INFO - Initiate the data validation
+[ 2025-09-23 15:37:07,490 ] 33 root - INFO - Required number of columns: 2
+[ 2025-09-23 15:37:07,490 ] 34 root - INFO - Data frame has columns: 20
+[ 2025-09-23 15:37:07,490 ] 33 root - INFO - Required number of columns: 2
+[ 2025-09-23 15:37:07,490 ] 34 root - INFO - Data frame has columns: 20
+[ 2025-09-23 15:37:16,336 ] 35 root - INFO - Data Validation Completed
+[ 2025-09-23 15:37:16,337 ] 39 root - INFO - Data transformation started
+[ 2025-09-23 15:37:16,337 ] 188 root - INFO - Entered initialize_data_transformation method of Data transformation class
+[ 2025-09-23 15:37:16,337 ] 190 root - INFO - Starting data transformation
+[ 2025-09-23 15:37:16,337 ] 193 root - INFO - Reading train and test data
+[ 2025-09-23 15:37:18,948 ] 73 root - INFO - Data preprocessing completed for DataFrame
+[ 2025-09-23 15:37:19,290 ] 73 root - INFO - Data preprocessing completed for DataFrame
+[ 2025-09-23 15:37:19,290 ] 94 root - INFO - Starting feature engineering. Initial DataFrame shape: (136780, 19)
+[ 2025-09-23 15:37:19,944 ] 85 root - INFO - Label encoding completed for DataFrame
+[ 2025-09-23 15:37:41,804 ] 172 root - INFO - Feature engineering completed successfully.
+[ 2025-09-23 15:37:41,804 ] 173 root - INFO - Final cleaned DataFrame shape: (109433, 13)
+[ 2025-09-23 15:37:41,805 ] 94 root - INFO - Starting feature engineering. Initial DataFrame shape: (34196, 19)
+[ 2025-09-23 15:37:41,984 ] 85 root - INFO - Label encoding completed for DataFrame
+[ 2025-09-23 15:37:47,636 ] 172 root - INFO - Feature engineering completed successfully.
+[ 2025-09-23 15:37:47,636 ] 173 root - INFO - Final cleaned DataFrame shape: (27346, 13)
+[ 2025-09-23 15:37:47,637 ] 214 root - INFO - Shape after train feature engineering (109433, 13)
+[ 2025-09-23 15:37:47,637 ] 215 root - INFO - Shape after test feature engineering (27346, 13)
+[ 2025-09-23 15:37:47,671 ] 43 root - INFO - Data Transformation Completed
+[ 2025-09-23 15:37:47,671 ] 45 root - INFO - Model Training started
+[ 2025-09-23 15:37:47,722 ] 125 root - INFO - shape of training data: (109433, 13)
+[ 2025-09-23 15:37:47,722 ] 126 root - INFO - Testing array: (27346, 13)
+[ 2025-09-23 15:37:47,722 ] 135 root - INFO - X_train shape: (109433, 12)
+[ 2025-09-23 15:37:47,723 ] 136 root - INFO - X_test shape(27346, 12)
+[ 2025-09-23 16:00:44,424 ] 47 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-09-23 16:00:44,465 ] 51 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-09-23 16:00:44,466 ] 47 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-09-23 16:00:44,514 ] 51 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-09-23 16:00:44,514 ] 108 root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='Artifacts\\09_23_2025_15_29_27\\model_trainer\\trained_model\\model.pkl', train_metric_artifact=RegressionMetricArtifact(mean_absolute_error=2.3292914463305454, r2_score=0.9033207330529056, mean_squared_error=8.50958118070605), test_metric_artifact=RegressionMetricArtifact(mean_absolute_error=2.6222476218148314, r2_score=0.8723478589939737, mean_squared_error=11.25809750013725))
+[ 2025-09-23 16:00:44,517 ] 50 root - INFO - Model Training artifact created

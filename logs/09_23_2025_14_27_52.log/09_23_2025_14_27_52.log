@@ -1,0 +1,15 @@
+[ 2025-09-23 14:28:00,135 ] 52 root - INFO - Model and scaler loaded successfully
+[ 2025-09-23 14:28:00,187 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-09-23 14:28:00,199 ] 97 werkzeug - INFO -  * Debugger PIN: 122-206-653
+[ 2025-09-23 14:29:04,302 ] 40 root - INFO - Start data Ingestion
+[ 2025-09-23 14:29:05,940 ] 64 root - ERROR - Error in training pipeline: Error occured in python script name [C:\Users\LENOVO\Desktop\FINAL PROJECTS\Delivery-Time-Prediction\src\pipeline\training_pipeline.py] line number [104] error message [Error occured in python script name [C:\Users\LENOVO\Desktop\FINAL PROJECTS\Delivery-Time-Prediction\src\pipeline\training_pipeline.py] line number [42] error message [Error occured in python script name [C:\Users\LENOVO\Desktop\FINAL PROJECTS\Delivery-Time-Prediction\src\components\data_ingestion.py] line number [93] error message [Error occured in python script name [C:\Users\LENOVO\Desktop\FINAL PROJECTS\Delivery-Time-Prediction\src\components\data_ingestion.py] line number [37] error message [<module 'sys' (built-in)>]]]]
+[ 2025-09-23 14:29:05,980 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pymongo\\synchronous\\cursor.py', reloading
+[ 2025-09-23 14:29:06,011 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pymongo\\_csot.py', reloading
+[ 2025-09-23 14:29:06,046 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\contextlib.py', reloading
+[ 2025-09-23 14:29:06,080 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pymongo\\synchronous\\pool.py', reloading
+[ 2025-09-23 14:29:06,111 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pymongo\\synchronous\\auth.py', reloading
+[ 2025-09-23 14:29:06,138 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pymongo\\synchronous\\helpers.py', reloading
+[ 2025-09-23 14:29:06,161 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pymongo\\synchronous\\network.py', reloading
+[ 2025-09-23 14:29:06,188 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\pymongo\\helpers_shared.py', reloading
+[ 2025-09-23 14:29:06,213 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 14:29:06] "[35m[1mGET /train HTTP/1.1[0m" 500 -
+[ 2025-09-23 14:29:06,400 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 14:29:06] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -

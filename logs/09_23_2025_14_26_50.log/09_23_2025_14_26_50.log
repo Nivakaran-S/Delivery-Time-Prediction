@@ -1,0 +1,12 @@
+[ 2025-09-23 14:26:56,984 ] 52 root - INFO - Model and scaler loaded successfully
+[ 2025-09-23 14:26:57,016 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-09-23 14:26:57,030 ] 97 werkzeug - INFO -  * Debugger PIN: 122-206-653
+[ 2025-09-23 14:27:01,724 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 14:27:01] "GET / HTTP/1.1" 200 -
+[ 2025-09-23 14:27:34,318 ] 80 root - INFO - Received data: {'multiple_deliveries': '5', 'Road_traffic_density': 'Medium', 'Vehicle_condition': 'Good', 'Delivery_person_Ratings': '4.5', 'distance_deliveries': '10.5', 'Weather_conditions': 'Fog', 'Festival': 'Yes', 'distance_traffic': '15.2', 'distance': '5.0', 'Delivery_person_Age': '30', 'prep_traffic': '12.0', 'City': 'Semi-Urban'}
+[ 2025-09-23 14:27:34,377 ] 134 root - INFO - Prediction: 45.31282424926758
+[ 2025-09-23 14:27:34,377 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Sep/2025 14:27:34] "POST /predict HTTP/1.1" 200 -
+[ 2025-09-23 14:27:48,028 ] 40 root - INFO - Start data Ingestion
+[ 2025-09-23 14:27:48,087 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\flask\\app.py', reloading
+[ 2025-09-23 14:27:48,123 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\site-packages\\werkzeug\\debug\\__init__.py', reloading
+[ 2025-09-23 14:27:48,210 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\http\\server.py', reloading
+[ 2025-09-23 14:27:48,281 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\LENOVO\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\threading.py', reloading

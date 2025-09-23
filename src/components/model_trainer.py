@@ -66,7 +66,7 @@ class ModelTrainer:
                     'max_depth': [5, 7, 9],
                     'learning_rate': [0.01, 0.05, 0.1],
                     'subsample': [0.6, 0.8, 1.0],
-                    'colsample_by_tree':[0.6, 0.8, 1.0]
+                    'colsample_bytree':[0.6, 0.8, 1.0]
                 }
                 
             }

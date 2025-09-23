@@ -1,9 +1,31 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template, jsonify, Response
 import joblib
 import numpy as np 
 import pandas as pd 
-from src.logging.logger import logging
 import os 
+import sys
+
+import certifi
+ca = certifi.where()
+from dotenv import load_dotenv 
+load_dotenv()
+
+mongo_db_url = os.getenv("MONGO_DB_URL")
+
+import pymongo 
+from src.exception.exception import DeliveryTimeException
+from src.logging.logger import logging
+from src.pipeline.training_pipeline import TrainingPipeline
+from src.utils.main_utils.utils import load_object
+from src.utils.ml_utils.model.estimator import DeliveryPredictionModel
+
+client = pymongo.MongoClient(mongo_db_url, tlsCAFile=ca)
+
+from src.constants.training_pipeline import DATA_INGESTION_COLLECTION_NAME
+from src.constants.training_pipeline import DATA_INGESTION_DATABASE_NAME
+
+database = client[DATA_INGESTION_DATABASE_NAME]
+collection = database[DATA_INGESTION_COLLECTION_NAME]
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
@@ -23,8 +45,6 @@ CITY = {'Urban': 0, 'Semi-Urban': 1, 'Metropolitan': 2}
 # Load model and scaler
 try:
     model = joblib.load('final_model/model.pkl')  # This is an instance of DeliveryPredictionModel
-    
-
     preprocessor = joblib.load('final_model/preprocessor.pkl')
     scaler = preprocessor['scaler']
     expected_features = preprocessor['feature_names']  # Ensure the same feature order
@@ -34,6 +54,16 @@ except Exception as e:
     logging.error(f"Error loading model or scaler: {e}")
     raise e
 
+@app.route("/train", methods=["GET"])
+def train_route():
+    try:
+        train_pipeline = TrainingPipeline()
+        train_pipeline.run_pipeline()
+        return Response("Training is successful")
+    except Exception as e:
+        logging.error(f"Error in training pipeline: {e}")
+        raise DeliveryTimeException(e, sys)
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -41,13 +71,30 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        data = request.form.to_dict()
-        logging.info(f"Received form data: {data}")
+        # Handle both form data and JSON data
+        if request.is_json:
+            data = request.get_json()
+        else:
+            data = request.form.to_dict()
+            
+        logging.info(f"Received data: {data}")
 
         def validate_dropdown(value, mapping, field_name):
             if value not in mapping:
                 raise ValueError(f"Invalid value '{value}' for {field_name}. Valid options: {list(mapping.keys())}")
             return mapping[value]
+        
+        # Validate required fields
+        required_fields = [
+            'multiple_deliveries', 'Road_traffic_density', 'Vehicle_condition', 
+            'Delivery_person_Ratings', 'distance_deliveries', 'Weather_conditions', 
+            'Festival', 'distance_traffic', 'distance', 'Delivery_person_Age', 
+            'prep_traffic', 'City'
+        ]
+        
+        missing_fields = [field for field in required_fields if field not in data or data[field] == '']
+        if missing_fields:
+            return jsonify({'error': f"Missing required fields: {', '.join(missing_fields)}"}), 400
         
         input_data = {
             'multiple_deliveries': float(data['multiple_deliveries']),
@@ -64,24 +111,50 @@ def predict():
             'City': validate_dropdown(data['City'], CITY, 'City')
         }
 
+        # Create DataFrame and ensure correct feature order
         df = pd.DataFrame([input_data])
         df = df[expected_features]  # enforce correct order
 
+        # Scale features and make prediction
         features_scaled = scaler.transform(df)
-        prediction = float(model.predict(features_scaled)[0])
+        
+        # Handle different model types
+        if hasattr(model, 'predict'):
+            prediction = model.predict(features_scaled)
+        else:
+            # If it's a sklearn model wrapped in your custom class
+            prediction = model.model.predict(features_scaled)
+        
+        # Ensure prediction is a scalar
+        if isinstance(prediction, np.ndarray):
+            prediction = float(prediction[0])
+        else:
+            prediction = float(prediction)
 
         logging.info(f"Prediction: {prediction}")
-        return jsonify({'prediction': round(prediction, 2)})
+        return jsonify({
+            'prediction': round(prediction, 2),
+            'status': 'success',
+            'message': f'Estimated delivery time: {round(prediction, 2)} minutes'
+        })
 
     except KeyError as e:
         logging.error(f"Missing field: {e}")
-        return jsonify({'error': f"Missing required field: {e}"}), 400
+        return jsonify({'error': f"Missing required field: {str(e)}"}), 400
     except ValueError as e:
         logging.error(f"Invalid input: {e}")
         return jsonify({'error': str(e)}), 400
     except Exception as e:
         logging.error(f"Error in prediction: {e}")
-        return jsonify({'error': 'Internal server error'}), 500
+        return jsonify({'error': 'Internal server error. Please try again.'}), 500
+
+@app.errorhandler(404)
+def not_found_error(error):
+    return jsonify({'error': 'Endpoint not found'}), 404
+
+@app.errorhandler(500)
+def internal_error(error):
+    return jsonify({'error': 'Internal server error'}), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))

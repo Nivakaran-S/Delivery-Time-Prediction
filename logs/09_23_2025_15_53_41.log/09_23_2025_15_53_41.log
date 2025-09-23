@@ -1,0 +1,9 @@
+[ 2025-09-23 15:53:50,879 ] 52 root - INFO - Model and scaler loaded successfully
+[ 2025-09-23 15:53:50,968 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.8.185:5000
+[ 2025-09-23 15:53:50,969 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-09-23 15:53:51,004 ] 97 werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[ 2025-09-23 15:54:32,518 ] 97 werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+[ 2025-09-23 16:24:33,028 ] 97 werkzeug - INFO -  * Restarting with watchdog (windowsapi)
